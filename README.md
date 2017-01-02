@@ -7,15 +7,18 @@ Repo to keep track of my dotfile configurations.
 $ tree -I ".git" -a
 
 .
-├── .README.md.swp
-├── .tmux.conf
-├── .vimrc
-├── .zshrc
 ├── LICENSE
-└── README.md
-
-0 directories, 6 files
-
+├── README.md
+├── atom
+│   ├── config.cson
+│   ├── init.coffee
+│   └── keymap.cson
+├── tmux
+│   └── .tmux.conf
+├── vim
+│   └── .vimrc
+└── zsh
+    └── .zshrc
 ```
 
 ## Other specifications
