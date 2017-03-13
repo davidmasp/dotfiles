@@ -1,0 +1,160 @@
+
+#################################################
+#						#
+#	MOVING AROUND AND CONTROL		#
+#						#
+#################################################
+
+
+# switch panes using Alt-arrow without prefix
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# switch windows using the w key
+#bind -n w-0 select-window -t 0
+#bind -n w-1 select-window -t 1
+#bind -n w-2 select-window -t 2
+#bind -n w-3 select-window -t 3
+#bind -n w-4 select-window -t 4
+
+# resize panels
+bind j resize-pane -D 10
+bind k resize-pane -U 10
+bind l resize-pane -L 10
+bind h resize-pane -R 10
+
+
+
+##################################################
+#                                                #
+#            GENERAL CONFIGURATION               #
+#                                                #
+##################################################
+
+
+# solve a problem with screen and vim in tmux (t)
+#set -g default-terminal "xterm-256color"
+
+# refresh the conf file with r (t)
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
+
+# Avoid renaming windows
+set-window-option -g automatic-rename off
+set-option -g allow-rename off
+
+# Enable mouse mode (tmux 2.1 and above) (t - not useful)
+# set -g mouse on
+
+# Enabling current path
+#bind '"' split-window -c "#{pane_current_path}"
+#bind % split-window -h -c "#{pane_current_path}"
+#bind c new-window -c "#{pane_current_path}"'"'
+
+
+##################################################
+#                                                #
+#            DESIGN CONFIGURATION                #
+#                                                #
+##################################################
+
+# First, some credit...
+# from http://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
+# source
+# https://www.reddit.com/r/unixporn/comments/3cn5gi/tmux_is_my_wm_on_os_x/
+
+# panes
+set -g pane-border-fg colour3
+set -g pane-active-border-fg brightred
+
+## Status bar design
+# status line
+set -g status-justify left
+set -g status-bg default
+set -g status-fg colour3
+set -g status-interval 2
+
+# messaging
+set -g message-fg black
+set -g message-bg yellow
+set -g message-command-fg blue
+set -g message-command-bg black
+
+#window mode
+setw -g mode-bg colour6
+setw -g mode-fg colour0
+
+# window status
+setw -g window-status-format " #F#I:#W#F "
+setw -g window-status-current-format " #F#I:#W#F "
+setw -g window-status-format "#[fg=magenta]#[bg=black] #I #[bg=cyan]#[fg=colour8] #W "
+setw -g window-status-current-format "#[bg=brightmagenta]#[fg=colour8] #I #[fg=colour8]#[bg=colour14] #W "
+setw -g window-status-current-bg colour0
+setw -g window-status-current-fg colour11
+setw -g window-status-current-attr dim
+setw -g window-status-bg green
+setw -g window-status-fg black
+setw -g window-status-attr reverse
+
+# Info on left (I don't have a session display for now)
+set -g status-left ''
+
+# loud or quiet?
+set-option -g visual-activity off
+set-option -g visual-bell off
+set-option -g visual-silence off
+set-window-option -g monitor-activity off
+set-option -g bell-action none
+
+
+
+# The modes {
+setw -g clock-mode-colour colour135
+setw -g mode-attr bold
+setw -g mode-fg colour196
+setw -g mode-bg colour238
+
+# }
+# The panes
+set -g pane-border-bg colour236
+set -g pane-border-fg colour241
+set -g pane-active-border-bg colour233
+set -g pane-active-border-fg colour11
+
+# The statusbar {
+
+set -g status-position bottom
+set -g status-bg colour234
+set -g status-fg colour137
+set -g status-attr dim
+
+set -g status-right ' #[fg=colour208]%d/%m/%y #[fg=colour208] %H:%M:%S '
+set -g status-right-length 80
+
+setw -g window-status-bell-attr bold
+setw -g window-status-bell-fg colour255
+setw -g window-status-bell-bg colour1
+
+
+# The messag
+#set -g message-attr bold
+#set -g message-fg colour232
+#set -g message-bg colour166
+
+# windows status down
+set -g status-left "#[fg=colour3]#h | s: #S | up: #(uptime | awk '{print $3}'|sed 's/,//')"
+set -g status-left-length 60
+set -g status-justify centre
+set-window-option -g window-status-format '#[fg=colour3]#I:#W'
+set-window-option -g window-status-current-format '#[fg=colour11] -> #I:#W <-'
+set -g status-fg colour4
+set -g status-bg colour234
+
+#color of the unused windows
+setw -g window-status-bg colour236
+setw -g window-status-attr none
+
+# color of the curremt windows
+setw -g window-status-current-bg colour238
+setw -g window-status-current-attr bold
