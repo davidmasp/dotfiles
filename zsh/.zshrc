@@ -98,6 +98,9 @@ alias shinyApp='R -e "shiny::runApp()"'
 # compres targz
 alias compresstargz='tar -zcvf'
 
+# Rstudio alias
+alias rstudio='open -n /Applications/RStudio.app'
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
