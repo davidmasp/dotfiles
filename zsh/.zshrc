@@ -89,9 +89,6 @@ alias mysqlrestart='sudo /usr/local/mysql/support-files/mysql.server restart'
 alias kwmstart='launchctl load /usr/local/opt/kwm/homebrew.mxcl.kwm.plist'
 alias kwmstop='launchctl unload /usr/local/opt/kwm/homebrew.mxcl.kwm.plist'
 
-# to project
-alias projects='~/Documents/Projects'
-
 # run a shiny app in the working directory
 alias shinyApp='R -e "shiny::runApp()"'
 
