@@ -12,6 +12,10 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
+# trying to solve a problem with python#
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -23,7 +27,7 @@ ZSH_THEME="agnoster"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+#DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -75,6 +79,12 @@ export PATH="$PATH:/usr/local/mysql/bin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+## LS colors
+
+
+
+
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -98,6 +108,27 @@ alias compresstargz='tar -zcvf'
 # Rstudio alias
 alias rstudio='open -n /Applications/RStudio.app'
 
+# Color in egrep
+alias egrep='egrep --colour'
+
+# conda start
+alias condastart='export PATH="/Users/davidmasp/anaconda/bin:$PATH"'
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+## RANGER
+
+function ranger-cd {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    /usr/local/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+        if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+	        cd -- "$(cat "$tempfile")"
+	    fi
+        rm -f -- "$tempfile"
+}
+
+
