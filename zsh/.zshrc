@@ -61,6 +61,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export PATH="$PATH:/usr/local/mysql/bin"
+export PATH="$PATH:/Users/davidmasp/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
