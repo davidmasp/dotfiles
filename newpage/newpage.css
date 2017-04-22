@@ -12,7 +12,7 @@ h1 {
   font-family: 'Pacifico';
   text-align: center;
   color: #ebdbb2;
-  font-size: 100px;
+  font-size: 80px;
 }
 
 a {
@@ -55,6 +55,25 @@ list {
 
 .gaming {
   background-color: #d65d0e;
+}
+
+.search-box {
+  background-color: #ebdbb2;
+}
+
+#clock {
+   font-size: 60px;
+   font-family: 'Roboto Mono', monospace;
+   text-align: center;
+   color: #ebdbb2;
+}
+
+input {
+   width: 40%;
+   height: 45px;
+   font-size: x-large;
+   font-family: 'Roboto Mono', monospace;
+   text-align: center;
 }
 
 .linux {

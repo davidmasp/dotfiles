@@ -6,10 +6,31 @@
     <title>Home</title>
      <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="newpage.css">
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+</script>
   </head>
-  <body>
-    <br>
+  <body onload="startTime()">
     <h1>Hello David!</h1>
+    <div id="clock"></div>
+    <br>
+    <form method="get" action="https://www.google.com/search">
+      <input type="text" class="search-box" name="q" size="31" value="" autofocus="autofocus">
+    </form>
     <br>
     <br>
     <div class="all">
