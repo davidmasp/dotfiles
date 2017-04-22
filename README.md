@@ -1,5 +1,5 @@
 # dotfiles
-Repo to keep track of my dotfile configurations. 
+Repo to keep track of my dotfile configurations.
 
 ## Tree
 
@@ -7,18 +7,29 @@ Repo to keep track of my dotfile configurations.
 $ tree -I ".git" -a
 
 .
+├── .DS_Store
+├── .gitignore
 ├── LICENSE
 ├── README.md
 ├── atom
 │   ├── config.cson
 │   ├── init.coffee
 │   └── keymap.cson
+├── newpage
+│   ├── .DS_Store
+│   ├── newpage.css
+│   ├── newpage.html
+│   └── tilde
+│       ├── README.md
+│       └── index.html
 ├── tmux
-│   └── .tmux.conf
+│   ├── .tmux.conf
+│   └── .tmux.conf.1.8
 ├── vim
 │   └── .vimrc
 └── zsh
-    └── .zshrc
+    ├── .zshrc
+    └── .zshrc.bak
 ```
 
 ## Other specifications
@@ -37,12 +48,12 @@ extracted from [here](http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-inst
 
 Github repo [here](https://github.com/robbyrussell/oh-my-zsh).
 
-install with 
+install with
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-### Theme 
+### Theme
 
 Edit the line in the `.zshrc`.
 
@@ -60,6 +71,8 @@ iTerm2 - solarized theme
 ### editors
 
 * vim - `.vimrc` with plugin manager [Pathogen](https://github.com/tpope/vim-pathogen)
-* atom - 
+* atom -
 
+### New Page for Firefox
 
+* A modified version of [this great starting page](https://www.reddit.com/r/startpages/comments/5gpm2m/a_simple_start_page_using_the_gruvbox_color_scheme/)
