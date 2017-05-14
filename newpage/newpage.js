@@ -36,6 +36,10 @@ function completeAndRedirect(){
     var a = query.split("..");
     var query = a[1]
     location.href='https://duckduckgo.com/?q='+query;
+  } else if (query.startsWith("r..")) {
+    var a = query.split("..");
+    var query = a[1]
+    location.href='https://www.reddit.com/r/'+query;
   } else {
     location.href='https://www.google.es/search?q='+query;
   }
