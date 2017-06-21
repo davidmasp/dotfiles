@@ -29,3 +29,7 @@
 
 'atom-workspace atom-text-editor:not([mini])':
   'shift-cmd-c': 'editor:toggle-line-comments'
+
+'atom-text-editor':
+  'cmd-shift-m': 'custom:insert-mgtr'
+  'cmd-shift-alt-m': 'custom:insert-mgtr2'
