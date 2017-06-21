@@ -112,6 +112,9 @@ alias rstudio='open -n /Applications/RStudio.app'
 # Color in egrep
 alias egrep='egrep --colour'
 
+# git alias
+alias giupdate='ga .gitignore && gc -m "gi update"'
+
 # conda start
 alias condastart='export PATH="/Users/davidmasp/anaconda/bin:$PATH"'
 
