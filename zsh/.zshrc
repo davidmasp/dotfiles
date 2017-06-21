@@ -115,6 +115,18 @@ alias egrep='egrep --colour'
 # conda start
 alias condastart='export PATH="/Users/davidmasp/anaconda/bin:$PATH"'
 
+# safe rm
+alias rm='rm -i'
+
+# docker PY
+alias dockerpy3='docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 python'
+# easy to run safe python scripts. Basically you are running the script in a
+# docker container with your current directory mounted in the working 
+# dir of the container so everything you have in your folder is there. Also 
+# if smth is created there you see it in your folder. Obviously you need 
+# docker running for this.
+
+#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
