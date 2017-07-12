@@ -1,0 +1,5 @@
+#!/bin/sh 
+tmux new-session -d 'zsh'
+tmux split-window -v 'watch --color git lg'
+tmux split-window -h 'watch --color git status'
+tmux -2 attach-session -d 
