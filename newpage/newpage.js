@@ -32,6 +32,8 @@ function completeAndRedirect(){
   var query = document.forms[0].elements[0].value;
   if (query == "n") {
     location.href='https://www.netflix.com/browse';
+  } else if (query == "t") {
+    location.href='https://twitter.com';
   } else if (query.startsWith("d..")) {
     var a = query.split("..");
     var query = a[1]
