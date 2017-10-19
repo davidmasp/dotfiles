@@ -12,3 +12,6 @@ fi
 alias rm='rm -i'
 alias l='ll'
 alias la='ls -a'
+alias ga='git add'
+alias gst='git status'
+alias gc='git commit'
