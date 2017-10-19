@@ -30,5 +30,6 @@ set cursorline
 set showmatch
 
 " setting up pathogen
-execute pathogen#infect()
+" execute pathogen#infect()
+
 
