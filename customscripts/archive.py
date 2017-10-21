@@ -27,6 +27,12 @@ def built_compressed_name(source_dir):
 
 
 input_path = args.input
+print("Name of the archived directory: {}".format(input_path))
+if os.path.isdir(input_path):
+	print("Directory exists, continuing with the archive")
 outfile_name = built_compressed_name(input_path)
-shutil.make_archive(base_name = outfile_name,format=args.format,base_dir = input_path)
+print("Outfile generated: {}".format(outfile_name))
 
+
+
+shutil.make_archive(base_name = outfile_name,format=args.format,base_dir = input_path)
